@@ -14,5 +14,13 @@ class HelloController {
     public String sayHello() {
         return "Hello from BridgeLabz";
     }
-}
 
+    @GetMapping("/UC2")
+    public String sayHello(Model model) {
+        // Add data to the model
+        model.addAttribute("message", "Hello from BridgeLabz");
+        // Return the view name (hello.html)
+        return "hello";
+    }
+
+}
